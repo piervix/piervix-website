@@ -1,0 +1,17 @@
+.slider .slide {
+  opacity: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.slider .details {
+  z-index: 2;
+}
+
+.arrow-up {
+  transform: rotate(180deg);
+}
+
+.slider .slide .slide-img {
+  @apply object-cover object-right w-full;
+}

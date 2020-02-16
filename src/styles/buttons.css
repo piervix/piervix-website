@@ -1,0 +1,44 @@
+/* Buttons
+========================================================================== */
+
+.btn {
+  @apply font-mono inline-block px-6 py-3 text-xs text-gray-600 tracking-wide font-normal antialiased;
+  transition: color 0.25s, border-color 0.25s;
+}
+
+@screen md {
+  .btn {
+    @apply text-sm;
+  }
+}
+
+.btn:disabled {
+  @apply opacity-25 cursor-not-allowed;
+}
+
+.btn-sm {
+  @apply font-mono inline-block rounded-lg px-2 py-2 text-xs tracking-normal font-semibold antialiased;
+  transition: background-color 0.25s, color 0.25s, border-color 0.25s;
+}
+
+.btn:focus,
+.btn-sm:focus {
+  @apply outline-none shadow-outline;
+}
+
+.btn-primary {
+  @apply border border-gray-600;
+}
+.btn-primary:hover {
+  @apply border border-black text-black;
+}
+.btn-primary span {
+  background-size: 0% 100%;
+  background-position: 0 1.2em;
+}
+.btn-primary:hover span {
+  background-image: linear-gradient(to right, yellow 0, yellow 100%);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  transition: background 0.2s, background-size 0.5s;
+}

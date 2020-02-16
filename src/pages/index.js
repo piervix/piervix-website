@@ -1,3 +1,13 @@
-import React from "react"
+import React from "react";
+import HomeTemplate from "../templates/HomeTemplate";
+import HeroBanner from "../components/HeroBanner";
+import BottomProjectBanner from "../components/BottomProjectBanner";
 
-export default () => <div>Hello world!</div>
+export default () => {
+  return (
+    <HomeTemplate>
+      <HeroBanner className="mt-48" />
+      <BottomProjectBanner />
+    </HomeTemplate>
+  );
+};

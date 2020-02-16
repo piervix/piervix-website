@@ -1,0 +1,68 @@
+body {
+  background: url("/img/dot.svg") repeat;
+}
+
+a.underline-link {
+  display: inline;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.25s ease-in;
+}
+a.underline-link:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  width: 0;
+  bottom: 2px;
+  background: yellow;
+  height: 3px;
+  transition: width 0.25s ease-in;
+}
+a.underline-link:hover:after,
+a.underline-link:focus:after,
+a.underline-link:active:after {
+  left: 0;
+  right: auto;
+  width: 100%;
+  color: black;
+}
+
+.ios-block-scroll {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  left: 0;
+}
+
+.main-container {
+  background: none;
+}
+@screen md {
+  .main-container {
+    /*background: url("/img/diamonds.svg") no-repeat right -16em top 12em;*/
+  }
+}
+
+.spacing {
+  @apply px-2 py-8;
+}
+
+@screen sm {
+  .spacing {
+    @apply px-4 py-10;
+  }
+}
+
+@screen md {
+  .spacing {
+    @apply px-8 py-10;
+  }
+}
+
+@screen lg {
+  .spacing {
+    @apply px-24 py-10;
+  }
+}
