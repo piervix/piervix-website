@@ -1,16 +1,17 @@
 import React from "react";
 
-import SiteMetadata from "../components/SiteMetadata";
+import Layout from "../components/Layout";
+import Head from "../components/Head";
 import Header from "../components/Header";
 
 export default ({ children }) => (
-  <>
-    <SiteMetadata bodyClassName="overflow-hidden" />
+  <Layout>
+    <Head bodyClassName="overflow-hidden" />
     <div className="ios-block-scroll">
       <div className="main-container h-screen">
         <Header />
         <div>{children}</div>
       </div>
     </div>
-  </>
+  </Layout>
 );
