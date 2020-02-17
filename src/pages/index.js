@@ -1,13 +1,13 @@
 import React from "react";
-import HomeTemplate from "../templates/HomeTemplate";
+import Home from "../templates/Home";
 import HeroBanner from "../components/HeroBanner";
 import BottomProjectBanner from "../components/BottomProjectBanner";
 
 export default () => {
   return (
-    <HomeTemplate>
+    <Home>
       <HeroBanner className="mt-48" />
       <BottomProjectBanner />
-    </HomeTemplate>
+    </Home>
   );
 };
