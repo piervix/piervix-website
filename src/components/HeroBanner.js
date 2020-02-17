@@ -1,5 +1,5 @@
 import React from "react";
-
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 import Button from "../components/Button";
 
 export default function HeroBanner() {
@@ -30,6 +30,11 @@ export default function HeroBanner() {
           text="more about me"
           fontSizeClass="text-1vh xs:text-1_5vh sm:text-1_5vh"
         />
+      </div>
+      <div className="fade-in flex justify-center sm:block">
+        <AniLink paintDrip hex="#fff" to="about">
+          About
+        </AniLink>
       </div>
     </div>
   );

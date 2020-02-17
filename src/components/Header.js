@@ -1,4 +1,6 @@
 import React, { useLayoutEffect, useState } from "react";
+
+import { Link } from "gatsby";
 import { TimelineMax, Power4 } from "gsap/all";
 import logo from "../assets/piervix_logo.svg";
 
@@ -96,35 +98,40 @@ export default function Header({ alternate = false }) {
         <div className="bg-white w-screen h-auto z-40" tabIndex="0">
           <ul className="inline-flex justify-center w-full font-mono py-4 text-sm text-right px-8">
             <li className="mr-6 py-4">
-              <a
+              <Link
                 className="text-gray-600 hover:text-black underline-link"
-                href="#0"
+                activeClassName="active-link"
+                to="/about"
               >
                 about
-              </a>
+              </Link>
             </li>
             <li className="mr-6 py-4">
-              <a
+              <Link
                 className="text-gray-600 hover:text-black underline-link"
-                href="#0"
+                activeClassName="active-link"
+                to="/projects"
               >
                 projects
-              </a>
+              </Link>
             </li>
             <li className="py-4">
-              <a
+              <Link
                 className="text-gray-600 hover:text-black underline-link"
-                href="#0"
+                activeClassName="active-link"
+                to="/contacts"
               >
                 contacts
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
       </nav>
       <div className="flex justify-center sm:justify-between header-spacing">
         <div className="logo z-50 sm:p-0 in-top">
-          <img src={logo} alt="Piervincenzo Madeo - Logo" />
+          <Link to="/">
+            <img src={logo} alt="Piervincenzo Madeo - Logo" />
+          </Link>
         </div>
         <nav
           id="main-nav"
@@ -133,28 +140,31 @@ export default function Header({ alternate = false }) {
         >
           <ul className="flex">
             <li className="mr-6">
-              <a
+              <Link
                 className="text-gray-600 hover:text-black underline-link"
-                href="#0"
+                activeClassName="active-link"
+                to="/about"
               >
                 about
-              </a>
+              </Link>
             </li>
             <li className="mr-6">
-              <a
+              <Link
                 className="text-gray-600 hover:text-black underline-link"
-                href="#0"
+                activeClassName="active-link"
+                to="/projects"
               >
                 projects
-              </a>
+              </Link>
             </li>
             <li className="mr-6">
-              <a
+              <Link
                 className="text-gray-600 hover:text-black underline-link"
-                href="#0"
+                activeClassName="active-link"
+                to="/contacts"
               >
                 contacts
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
