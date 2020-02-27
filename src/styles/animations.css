@@ -1,9 +1,9 @@
 /**
  * ----------------------------------------
- * Animation in from the top
+ * Animate HomePage
  * ----------------------------------------
  */
-.in-top {
+.animate .in-top {
   animation: in-top 0.3s;
   animation-fill-mode: both;
   animation-delay: 3s;
@@ -25,12 +25,8 @@
   }
 }
 
-/**
- * ----------------------------------------
- * Animation in from the bottom
- * ----------------------------------------
- */
-.in-bottom {
+.animate .in-bottom {
+  opacity: 0;
   animation: in-bottom 0.3s forwards;
 }
 
@@ -52,12 +48,7 @@
   }
 }
 
-/**
- * ----------------------------------------
- * Animation fade-in
- * ----------------------------------------
- */
-.fade-in {
+.animate .fade-in {
   animation: fade-in 0.15s both;
   animation-delay: 3.2s;
 }
@@ -80,36 +71,15 @@
   }
 }
 
-.fade-in-50 {
-  animation: fade-in-50 0.15s both;
-}
-@keyframes fade-in-50 {
-  0% {
-    opacity: 0;
-    animation-timing-function: ease-in;
-  }
-  50% {
-    opacity: 0.25;
-    animation-timing-function: ease-out;
-  }
-  100% {
-    opacity: 0.5;
-    animation-timing-function: ease-in;
-  }
-}
-
-/**
- * ----------------------------------------
- * Welcome message letter animation in HeroBanner
- * ----------------------------------------
- */
-.welcome-message span {
+.animate .welcome-message span {
+  margin-bottom: -8px;
   position: relative;
   overflow: hidden;
   display: inline-block;
+  line-height: 1.2;
 }
 
-.welcome-message span::after {
+.animate .welcome-message span::after {
   content: "";
   position: absolute;
   top: 0;
@@ -121,7 +91,7 @@
   transform: translateX(-101%);
 }
 
-.welcome-message span::before {
+.animate .welcome-message span::before {
   content: "";
   position: absolute;
   top: 0;
@@ -133,20 +103,20 @@
   transform: translateX(0);
 }
 
-.welcome-message span:nth-of-type(1)::before,
-.welcome-message span:nth-of-type(1)::after {
+.animate .welcome-message span:nth-of-type(1)::before,
+.animate .welcome-message span:nth-of-type(1)::after {
   animation-delay: 0.5s;
   animation-duration: 0.4s;
 }
 
-.welcome-message span:nth-of-type(2)::before,
-.welcome-message span:nth-of-type(2)::after {
+.animate .welcome-message span:nth-of-type(2)::before,
+.animate .welcome-message span:nth-of-type(2)::after {
   animation-delay: 1s;
   animation-duration: 0.6s;
 }
 
-.welcome-message span:nth-of-type(3)::before,
-.welcome-message span:nth-of-type(3)::after {
+.animate .welcome-message span:nth-of-type(3)::before,
+.animate .welcome-message span:nth-of-type(3)::after {
   animation-delay: 1.5s;
   animation-duration: 0.8s;
 }
@@ -210,4 +180,22 @@ span.row:hover i.underlined {
 i.underlined--offset {
   background-position: 0 0.2em;
   box-shadow: inset 0 -0.5em 0 0 white;
+}
+
+.fade-in-50 {
+  animation: fade-in-50 0.15s both;
+}
+@keyframes fade-in-50 {
+  0% {
+    opacity: 0;
+    animation-timing-function: ease-in;
+  }
+  50% {
+    opacity: 0.25;
+    animation-timing-function: ease-out;
+  }
+  100% {
+    opacity: 0.5;
+    animation-timing-function: ease-in;
+  }
 }

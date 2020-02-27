@@ -4,6 +4,14 @@
   overflow: hidden;
 }
 
+.slider .show-first-slide {
+  opacity: 1;
+}
+
+.animate .slider .show-first-slide {
+  opacity: 0;
+}
+
 .slider .details {
   z-index: 2;
 }

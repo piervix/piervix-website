@@ -1,17 +1,19 @@
 import React from "react";
 
-import Layout from "../components/Layout";
 import Head from "../components/Head";
-import Header from "../components/Header";
+import Layout from "../components/Layout";
 
-export default ({ children }) => (
-  <Layout>
-    <Head bodyClassName="overflow-hidden" />
-    <div className="ios-block-scroll">
-      <div className="main-container h-screen">
-        <Header />
-        <div>{children}</div>
+export default ({ animate, children }) => {
+  return (
+    <>
+      <Head bodyClassName="overflow-hidden" />
+      <div className="ios-block-scroll">
+        <div className={`main-container h-screen ${animate ? "animate" : ""}`}>
+          <Layout>
+            <div>{children}</div>
+          </Layout>
+        </div>
       </div>
-    </div>
-  </Layout>
-);
+    </>
+  );
+};

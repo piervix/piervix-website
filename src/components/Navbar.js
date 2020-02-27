@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 import { TimelineMax, Power4 } from "gsap/all";
 import logo from "../assets/piervix_logo.svg";
 
-export default function Header({ alternate = false }) {
+export default function HomeNavbar({ alternate = false }) {
   const [toggleMobileMenu, setToggleMobileMenu] = useState(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const mobileMenuToggle = () => {

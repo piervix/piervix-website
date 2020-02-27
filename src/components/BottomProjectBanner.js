@@ -239,7 +239,7 @@ export default function BottomProjectBanner(props) {
             id={`slide-${i + 1}`}
             className={
               i === 0
-                ? "slide absolute bottom-0 right-0 in-bottom"
+                ? "slide absolute bottom-0 right-0 in-bottom  show-first-slide"
                 : "slide absolute bottom-0 right-0"
             }
             style={i === 0 ? { animationDelay: "3s" } : null}

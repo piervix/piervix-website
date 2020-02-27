@@ -740,11 +740,11 @@ a.underline-link:active:after {
 
 /**
  * ----------------------------------------
- * Animation in from the top
+ * Animate HomePage
  * ----------------------------------------
  */
 
-.in-top {
+.animate .in-top {
   -webkit-animation: in-top 0.3s;
           animation: in-top 0.3s;
   -webkit-animation-fill-mode: both;
@@ -799,13 +799,8 @@ a.underline-link:active:after {
   }
 }
 
-/**
- * ----------------------------------------
- * Animation in from the bottom
- * ----------------------------------------
- */
-
-.in-bottom {
+.animate .in-bottom {
+  opacity: 0;
   -webkit-animation: in-bottom 0.3s forwards;
           animation: in-bottom 0.3s forwards;
 }
@@ -856,13 +851,7 @@ a.underline-link:active:after {
   }
 }
 
-/**
- * ----------------------------------------
- * Animation fade-in
- * ----------------------------------------
- */
-
-.fade-in {
+.animate .fade-in {
   -webkit-animation: fade-in 0.15s both;
           animation: fade-in 0.15s both;
   -webkit-animation-delay: 3.2s;
@@ -921,64 +910,15 @@ a.underline-link:active:after {
   }
 }
 
-.fade-in-50 {
-  -webkit-animation: fade-in-50 0.15s both;
-          animation: fade-in-50 0.15s both;
-}
-
-@-webkit-keyframes fade-in-50 {
-  0% {
-    opacity: 0;
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-
-  50% {
-    opacity: 0.25;
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-  }
-
-  100% {
-    opacity: 0.5;
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-}
-
-@keyframes fade-in-50 {
-  0% {
-    opacity: 0;
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-
-  50% {
-    opacity: 0.25;
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-  }
-
-  100% {
-    opacity: 0.5;
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-}
-
-/**
- * ----------------------------------------
- * Welcome message letter animation in HeroBanner
- * ----------------------------------------
- */
-
-.welcome-message span {
+.animate .welcome-message span {
+  margin-bottom: -8px;
   position: relative;
   overflow: hidden;
   display: inline-block;
+  line-height: 1.2;
 }
 
-.welcome-message span::after {
+.animate .welcome-message span::after {
   content: "";
   position: absolute;
   top: 0;
@@ -992,7 +932,7 @@ a.underline-link:active:after {
           transform: translateX(-101%);
 }
 
-.welcome-message span::before {
+.animate .welcome-message span::before {
   content: "";
   position: absolute;
   top: 0;
@@ -1006,24 +946,24 @@ a.underline-link:active:after {
           transform: translateX(0);
 }
 
-.welcome-message span:nth-of-type(1)::before,
-.welcome-message span:nth-of-type(1)::after {
+.animate .welcome-message span:nth-of-type(1)::before,
+.animate .welcome-message span:nth-of-type(1)::after {
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
   -webkit-animation-duration: 0.4s;
           animation-duration: 0.4s;
 }
 
-.welcome-message span:nth-of-type(2)::before,
-.welcome-message span:nth-of-type(2)::after {
+.animate .welcome-message span:nth-of-type(2)::before,
+.animate .welcome-message span:nth-of-type(2)::after {
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
   -webkit-animation-duration: 0.6s;
           animation-duration: 0.6s;
 }
 
-.welcome-message span:nth-of-type(3)::before,
-.welcome-message span:nth-of-type(3)::after {
+.animate .welcome-message span:nth-of-type(3)::before,
+.animate .welcome-message span:nth-of-type(3)::after {
   -webkit-animation-delay: 1.5s;
           animation-delay: 1.5s;
   -webkit-animation-duration: 0.8s;
@@ -1143,6 +1083,51 @@ span.row:hover i.underlined {
 i.underlined--offset {
   background-position: 0 0.2em;
   box-shadow: inset 0 -0.5em 0 0 white;
+}
+
+.fade-in-50 {
+  -webkit-animation: fade-in-50 0.15s both;
+          animation: fade-in-50 0.15s both;
+}
+
+@-webkit-keyframes fade-in-50 {
+  0% {
+    opacity: 0;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+
+  50% {
+    opacity: 0.25;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+
+  100% {
+    opacity: 0.5;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+}
+
+@keyframes fade-in-50 {
+  0% {
+    opacity: 0;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+
+  50% {
+    opacity: 0.25;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+
+  100% {
+    opacity: 0.5;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
 }
 
 .container {
@@ -1603,6 +1588,14 @@ i.underlined--offset {
   opacity: 0;
   pointer-events: none;
   overflow: hidden;
+}
+
+.slider .show-first-slide {
+  opacity: 1;
+}
+
+.animate .slider .show-first-slide {
+  opacity: 0;
 }
 
 .slider .details {
