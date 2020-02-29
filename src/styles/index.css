@@ -656,7 +656,8 @@ body {
   background: url("/img/dot.svg") repeat;
 }
 
-a.underline-link {
+a.underline-link,
+a.active-link {
   display: inline;
   position: relative;
   overflow: hidden;
@@ -664,7 +665,8 @@ a.underline-link {
   transition: color 0.25s ease-in;
 }
 
-a.underline-link:after {
+a.underline-link:after,
+a.active-link:after {
   content: "";
   position: absolute;
   z-index: -1;
@@ -679,10 +681,15 @@ a.underline-link:after {
 
 a.underline-link:hover:after,
 a.underline-link:focus:after,
-a.underline-link:active:after {
+a.underline-link:active:after,
+a.active-link:after {
   left: 0;
   right: auto;
   width: 100%;
+  color: black;
+}
+
+a.active-link {
   color: black;
 }
 

@@ -1,19 +1,19 @@
 import React from "react";
 import { Link } from "gatsby";
 
-import Layout from "../components/layout";
-import Head from "../components/head";
+import MainLayout from "../components/MainLayout";
+import SEO from "../components/SEO";
 
 const ProjectPage = () => {
   return (
-    <Layout>
-      <Head title="Projects" />
+    <MainLayout>
+      <SEO title="Projects" />
       <h1>Projects</h1>
-      <p>Projects will be her.</p>
+      <p>Projects will be here.</p>
       <p>
         <Link to="/contact">Want to work with me? Reach out.</Link>
       </p>
-    </Layout>
+    </MainLayout>
   );
 };
 

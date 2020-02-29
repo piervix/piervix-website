@@ -6,7 +6,7 @@
 @import "tailwindcss/components";
 
 @import "./buttons.css";
-@import "./header.css";
+@import "./navbar.css";
 @import "./bottom-banner.css";
 
 @import "tailwindcss/utilities";

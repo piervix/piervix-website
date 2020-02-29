@@ -1,12 +1,14 @@
 import React, { useLayoutEffect, useState } from "react";
 
 import { Link } from "gatsby";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 import { TimelineMax, Power4 } from "gsap/all";
 import logo from "../assets/piervix_logo.svg";
 
 export default function HomeNavbar({ alternate = false }) {
   const [toggleMobileMenu, setToggleMobileMenu] = useState(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   const mobileMenuToggle = () => {
     if (!isMobileMenuOpen) {
       console.log("you have to open");
@@ -18,6 +20,7 @@ export default function HomeNavbar({ alternate = false }) {
     toggleMobileMenu.animation.reverse();
     setIsMobileMenuOpen(false);
   };
+
   useLayoutEffect(() => {
     const mobileNavbar = document.querySelector(".nav-content-mobile");
     const mobileNavbarItemOne = document.querySelector(
@@ -77,6 +80,7 @@ export default function HomeNavbar({ alternate = false }) {
         ),
     });
   }, []);
+
   return (
     <div id="header">
       <div
@@ -98,40 +102,49 @@ export default function HomeNavbar({ alternate = false }) {
         <div className="bg-white w-screen h-auto z-40" tabIndex="0">
           <ul className="inline-flex justify-center w-full font-mono py-4 text-sm text-right px-8">
             <li className="mr-6 py-4">
-              <Link
+              <AniLink
+                duration={0.8}
+                paintDrip
+                hex="#fff"
                 className="text-gray-600 hover:text-black underline-link"
                 activeClassName="active-link"
                 to="/about"
               >
                 about
-              </Link>
+              </AniLink>
             </li>
             <li className="mr-6 py-4">
-              <Link
+              <AniLink
+                duration={0.8}
+                paintDrip
+                hex="#fff"
                 className="text-gray-600 hover:text-black underline-link"
                 activeClassName="active-link"
                 to="/projects"
               >
                 projects
-              </Link>
+              </AniLink>
             </li>
             <li className="py-4">
-              <Link
+              <AniLink
+                duration={0.8}
+                paintDrip
+                hex="#fff"
                 className="text-gray-600 hover:text-black underline-link"
                 activeClassName="active-link"
                 to="/contacts"
               >
                 contacts
-              </Link>
+              </AniLink>
             </li>
           </ul>
         </div>
       </nav>
       <div className="flex justify-center sm:justify-between header-spacing">
         <div className="logo z-50 sm:p-0 in-top">
-          <Link to="/">
+          <AniLink cover to="/" direction="left" bg="#fff" duration={0.8}>
             <img src={logo} alt="Piervincenzo Madeo - Logo" />
-          </Link>
+          </AniLink>
         </div>
         <nav
           id="main-nav"
@@ -140,31 +153,40 @@ export default function HomeNavbar({ alternate = false }) {
         >
           <ul className="flex">
             <li className="mr-6">
-              <Link
+              <AniLink
+                duration={0.8}
+                paintDrip
+                hex="#fff"
                 className="text-gray-600 hover:text-black underline-link"
                 activeClassName="active-link"
                 to="/about"
               >
                 about
-              </Link>
+              </AniLink>
             </li>
             <li className="mr-6">
-              <Link
+              <AniLink
+                duration={0.8}
+                paintDrip
+                hex="#fff"
                 className="text-gray-600 hover:text-black underline-link"
                 activeClassName="active-link"
                 to="/projects"
               >
                 projects
-              </Link>
+              </AniLink>
             </li>
             <li className="mr-6">
-              <Link
+              <AniLink
+                duration={0.8}
+                paintDrip
+                hex="#fff"
                 className="text-gray-600 hover:text-black underline-link"
                 activeClassName="active-link"
                 to="/contacts"
               >
                 contacts
-              </Link>
+              </AniLink>
             </li>
           </ul>
         </nav>

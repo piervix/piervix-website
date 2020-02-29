@@ -1,19 +1,19 @@
 import React from "react";
 import { Link } from "gatsby";
 
-import Layout from "../components/layout";
-import Head from "../components/head";
+import MainLayout from "../components/MainLayout";
+import SEO from "../components/SEO";
 
 const AboutPage = () => {
   return (
-    <Layout>
-      <Head title="About" />
+    <MainLayout>
+      <SEO title="About" />
       <h1>About Me</h1>
-      <p>I currently teach full-time on Udemy.</p>
+      <p>I currently work as Head of UX at Foodracers.</p>
       <p>
         <Link to="/contact">Want to work with me? Reach out.</Link>
       </p>
-    </Layout>
+    </MainLayout>
   );
 };
 
