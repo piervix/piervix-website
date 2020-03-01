@@ -8,5 +8,6 @@
 @import "./buttons.css";
 @import "./navbar.css";
 @import "./bottom-banner.css";
+@import "./page-bottom-next-content.css";
 
 @import "tailwindcss/utilities";

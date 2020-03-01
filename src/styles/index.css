@@ -656,43 +656,6 @@ body {
   background: url("/img/dot.svg") repeat;
 }
 
-a.underline-link,
-a.active-link {
-  display: inline;
-  position: relative;
-  overflow: hidden;
-  -webkit-transition: color 0.25s ease-in;
-  transition: color 0.25s ease-in;
-}
-
-a.underline-link:after,
-a.active-link:after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  right: 0;
-  width: 0;
-  bottom: 2px;
-  background: yellow;
-  height: 3px;
-  -webkit-transition: width 0.25s ease-in;
-  transition: width 0.25s ease-in;
-}
-
-a.underline-link:hover:after,
-a.underline-link:focus:after,
-a.underline-link:active:after,
-a.active-link:after {
-  left: 0;
-  right: auto;
-  width: 100%;
-  color: black;
-}
-
-a.active-link {
-  color: black;
-}
-
 .ios-block-scroll {
   position: fixed;
   top: 0;
@@ -1027,7 +990,7 @@ a.active-link {
 
 /**
  * ----------------------------------------
- * Animation hover wlecome message
+ * Animation hover welcome message
  * ----------------------------------------
  */
 
@@ -1068,28 +1031,8 @@ a.active-link {
   }
 }
 
-i.underlined {
-  color: black;
-  -webkit-box-flex: 1;
-          flex: 1;
-  text-decoration: none;
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(0, yellow), to(yellow));
-  background-image: linear-gradient(to right, yellow 0, yellow 100%);
-  background-position: 0 1.2em;
-  background-size: 0% 100%;
-  background-repeat: no-repeat;
-  -webkit-transition: background 0.5s;
-  transition: background 0.5s;
-  font-style: normal;
-}
-
-span.row:hover i.underlined {
+.row:hover i.underlined {
   background-size: 100% 100%;
-}
-
-i.underlined--offset {
-  background-position: 0 0.2em;
-  box-shadow: inset 0 -0.5em 0 0 white;
 }
 
 .fade-in-50 {
@@ -1135,6 +1078,32 @@ i.underlined--offset {
     -webkit-animation-timing-function: ease-in;
             animation-timing-function: ease-in;
   }
+}
+
+/**
+ * ----------------------------------------
+ * Animation hover hero text
+ * ----------------------------------------
+ */
+
+i.underlined {
+  color: black;
+  -webkit-box-flex: 1;
+          flex: 1;
+  text-decoration: none;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0, yellow), to(yellow));
+  background-image: linear-gradient(to right, yellow 0, yellow 100%);
+  background-position: 0 1.2em;
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  -webkit-transition: background 0.5s;
+  transition: background 0.5s;
+  font-style: normal;
+}
+
+i.underlined--offset {
+  background-position: 0 0.2em;
+  box-shadow: inset 0 -0.5em 0 0 white;
 }
 
 .container {
@@ -1535,6 +1504,43 @@ i.underlined--offset {
   }
 }
 
+a.underline-link,
+a.active-link {
+  display: inline;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: color 0.25s ease-in;
+  transition: color 0.25s ease-in;
+}
+
+a.underline-link:after,
+a.active-link:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  width: 0;
+  bottom: 2px;
+  background: yellow;
+  height: 3px;
+  -webkit-transition: width 0.25s ease-in;
+  transition: width 0.25s ease-in;
+}
+
+a.underline-link:hover:after,
+a.underline-link:focus:after,
+a.underline-link:active:after,
+a.active-link:after {
+  left: 0;
+  right: auto;
+  width: 100%;
+  color: black;
+}
+
+a.active-link {
+  color: black;
+}
+
 .button {
   position: relative;
   display: -webkit-box;
@@ -1620,6 +1626,27 @@ i.underlined--offset {
   -o-object-position: right;
      object-position: right;
   width: 100%;
+}
+
+.page-bottom-next-content {
+}
+
+.page-bottom-next-content a {
+  color: #fff;
+}
+
+.page-bottom-next-content a:hover {
+  color: #fff;
+}
+
+.page-bottom-next-content a .content-type {
+  font-family: "Fira Mono", Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  opacity: 0.75;
+  font-size: 0.875rem;
+}
+
+.page-bottom-next-content a .content {
+  font-size: 1.875rem;
 }
 
 .sr-only {

@@ -141,7 +141,7 @@
 
 /**
  * ----------------------------------------
- * Animation hover wlecome message
+ * Animation hover welcome message
  * ----------------------------------------
  */
 .white-background {
@@ -162,24 +162,8 @@
     visibility: hidden;
   }
 }
-
-i.underlined {
-  color: black;
-  flex: 1;
-  text-decoration: none;
-  background-image: linear-gradient(to right, yellow 0, yellow 100%);
-  background-position: 0 1.2em;
-  background-size: 0% 100%;
-  background-repeat: no-repeat;
-  transition: background 0.5s;
-  font-style: normal;
-}
-span.row:hover i.underlined {
+.row:hover i.underlined {
   background-size: 100% 100%;
-}
-i.underlined--offset {
-  background-position: 0 0.2em;
-  box-shadow: inset 0 -0.5em 0 0 white;
 }
 
 .fade-in-50 {
@@ -198,4 +182,27 @@ i.underlined--offset {
     opacity: 0.5;
     animation-timing-function: ease-in;
   }
+}
+
+/**
+ * ----------------------------------------
+ * Animation hover hero text
+ * ----------------------------------------
+ */
+
+i.underlined {
+  color: black;
+  flex: 1;
+  text-decoration: none;
+  background-image: linear-gradient(to right, yellow 0, yellow 100%);
+  background-position: 0 1.2em;
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  transition: background 0.5s;
+  font-style: normal;
+}
+
+i.underlined--offset {
+  background-position: 0 0.2em;
+  box-shadow: inset 0 -0.5em 0 0 white;
 }

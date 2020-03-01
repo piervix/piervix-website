@@ -1,0 +1,18 @@
+.page-bottom-next-content {
+}
+
+.page-bottom-next-content a {
+  @apply text-white;
+}
+
+.page-bottom-next-content a:hover {
+  @apply text-white;
+}
+
+.page-bottom-next-content a .content-type {
+  @apply font-mono opacity-75 text-sm;
+}
+
+.page-bottom-next-content a .content {
+  @apply text-3xl;
+}
