@@ -1,10 +1,30 @@
 import React from "react";
-import { Link } from "gatsby";
+import { Link, graphql, useStaticQuery } from "gatsby";
 
 import MainLayout from "../components/MainLayout";
 import SEO from "../components/SEO";
 
 const ProjectPage = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      projects: allContentfulProject(sort: { fields: updatedAt, order: DESC }) {
+        edges {
+          node {
+            name
+            slug
+            images {
+              fluid {
+                src
+              }
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  console.log(data);
+
   return (
     <MainLayout>
       <SEO title="Projects" />
