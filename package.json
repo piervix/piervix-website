@@ -24,7 +24,7 @@
     "gatsby-plugin-transition-link": "^1.17.7",
     "gatsby-source-contentful": "^2.1.89",
     "gatsby-source-graphql": "^2.1.33",
-    "gsap": "^3.1.1",
+    "gsap": "^3.6.0",
     "lethargy": "^1.0.9",
     "lodash": "^4.17.15",
     "react": "^16.12.0",
